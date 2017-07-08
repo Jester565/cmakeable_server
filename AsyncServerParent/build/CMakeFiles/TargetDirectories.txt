@@ -1,0 +1,3 @@
+/home/ajcra/northrop/cmakeable_server/AsyncServerParent/build/CMakeFiles/edit_cache.dir
+/home/ajcra/northrop/cmakeable_server/AsyncServerParent/build/CMakeFiles/rebuild_cache.dir
+/home/ajcra/northrop/cmakeable_server/AsyncServerParent/build/CMakeFiles/AsyncServerParent.dir

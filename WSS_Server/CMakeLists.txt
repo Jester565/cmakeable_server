@@ -8,16 +8,16 @@ set(HEADER_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include)
 set(SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
 
 set (HEADERS
-	${HEADER_DIR}/WSHeaderManager.h
-	${HEADER_DIR}/WSIPacket.h
-	${HEADER_DIR}/WSOPacket.h
-	${HEADER_DIR}/WSServer.h)
+	${HEADER_DIR}/WSS_Server.h
+	${HEADER_DIR}/WSS_ServicePool.h
+	${HEADER_DIR}/WSS_TCPAcceptor.h
+	${HEADER_DIR}/WSS_TCPConnection.h)
 	
 set (SOURCES
-	${SOURCE_DIR}/WSHeaderManager.cpp
-	${SOURCE_DIR}/WSIPacket.cpp
-	${SOURCE_DIR}/WSOPacket.cpp
-	${SOURCE_DIR}/WSServer.cpp)
+	${SOURCE_DIR}/WSS_Server.cpp
+	${SOURCE_DIR}/WSS_ServicePool.cpp
+	${SOURCE_DIR}/WSS_TCPAcceptor.cpp
+	${SOURCE_DIR}/WSS_TCPConnection.cpp)
 	
 set(Boost_INCLUDE_DIR "/usr/local/src/boost_1_64_0" CACHE STRING "The directories of the boost header files")
 set(Boost_LIBRARY_DIR "/usr/local/src/boost_1_64_0/stage/lib"  CACHE STRING "The directories of the boost library files")
