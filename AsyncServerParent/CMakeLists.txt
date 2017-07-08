@@ -43,6 +43,7 @@ set(Boost_LIBRARY_DIR "/usr/local/src/boost_1_64_0/stage/lib"  CACHE STRING "The
 set(Proto_INCLUDE_DIR "/usr/local/src/protobuf-3.3.0/install/include")
 set(Proto_LIBRARY_DIR "/usr/local/src/protobuf-3.3.0/install/lib")
 
+include_directories(${HEADER_DIR})
 include_directories(${Boost_INCLUDE_DIR})
 include_directories(${Proto_INCLUDE_DIR})
 
