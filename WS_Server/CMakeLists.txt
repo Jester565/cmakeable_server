@@ -19,7 +19,7 @@ set (SOURCES
 	${SOURCE_DIR}/WSIPacket.cpp
 	${SOURCE_DIR}/WSOPacket.cpp
 	${SOURCE_DIR}/WSServer.cpp
-	${SOURCE_DIR}/Packets/PackFW.pb.cc)
+	${HEADER_DIR}/Packets/PackFW.pb.cc)
 	
 set(Boost_INCLUDE_DIR "/usr/local/src/boost_1_64_0" CACHE STRING "The directories of the boost header files")
 set(Boost_LIBRARY_DIR "/usr/local/src/boost_1_64_0/stage/lib"  CACHE STRING "The directories of the boost library files")
