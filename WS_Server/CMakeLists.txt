@@ -27,8 +27,6 @@ include_directories(${HEADER_DIR}
 
 add_library(${PROJECT_NAME} STATIC ${SOURCES})
 
-MESSAGE(STATUS "ProtoLibDir: " ${Proto_LIBRARY_DIR})
-
 target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARY_DIR}/libboost_system.a
 	${Boost_LIBRARY_DIR}/libboost_thread.a
 	${Proto_LIBRARY_DIR}/libprotobuf.a
@@ -38,7 +36,7 @@ target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARY_DIR}/libboost_system.a
 set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 11)
 set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD_REQUIRED 11)
 
-set(${PROJECT_NAME}_INCLUDE_DIRS ${HEADERS_DIR}
+set(${PROJECT_NAME}_INCLUDE_DIRS ${HEADER_DIR}
 ${AsyncServerParent_INCLUDE_DIRS}
 ${HtmlHandle_INCLUDE_DIRS}
 CACHE INTERNAL "${PROJECT_NAME}: Include Directories" FORCE)

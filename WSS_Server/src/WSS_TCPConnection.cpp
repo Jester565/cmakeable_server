@@ -92,7 +92,7 @@ void WSS_TCPConnection::asyncHandshakeHandler(const boost::system::error_code& e
 	}
 	else
 	{
-		LOG_PRINTF(LOG_LEVEL::Error, "Error occured in SSL Handshake: %s%s%s", error, " - ", error.message());
+	  LOG_PRINTF(LOG_LEVEL::Error, "Error occured in SSL Handshake: %s%s%s", error, " - ", error.message().c_str());
 		std::string hrerr;
 		hrerr += boost::lexical_cast<std::string>(ERR_GET_LIB(error.value()));
 		hrerr += ", ";
@@ -103,7 +103,7 @@ void WSS_TCPConnection::asyncHandshakeHandler(const boost::system::error_code& e
 		char buf[128];
 		ERR_error_string_n(error.value(), buf, 128);
 		hrerr += buf;
-		LOG_PRINTF(LOG_LEVEL::Error, "Human Readable Error Version: %s", hrerr);
+		LOG_PRINTF(LOG_LEVEL::Error, "Human Readable Error Version: %s", hrerr.c_str());
 	}
 }
 
@@ -116,7 +116,7 @@ void WSS_TCPConnection::wssAsyncReceiveHandler(const boost::system::error_code& 
 			server->getClientManager()->removeClient(cID);
 			return;
 		}
-		LOG_PRINTF(LOG_LEVEL::Error, "Error occured in SSL Read: %s%s%s", error, " - ", error.message());
+		LOG_PRINTF(LOG_LEVEL::Error, "Error occured in SSL Read: %s%s%s", error, " - ", error.message().c_str());
 		std::string hrerr;
 		hrerr += boost::lexical_cast<std::string>(ERR_GET_LIB(error.value()));
 		hrerr += ", ";
@@ -127,7 +127,7 @@ void WSS_TCPConnection::wssAsyncReceiveHandler(const boost::system::error_code& 
 		char buf[128];
 		ERR_error_string_n(error.value(), buf, 128);
 		hrerr += buf;
-		LOG_PRINTF(LOG_LEVEL::Error, "Human Readable Error Version: %s", hrerr);
+		LOG_PRINTF(LOG_LEVEL::Error, "Human Readable Error Version: %s", hrerr.c_str());
 	}
 	boost::shared_ptr<IPacket> iPack = hm->decryptHeader(receiveStorage->data(), nBytes, cID);
 	if (iPack != nullptr)

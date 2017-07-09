@@ -56,7 +56,7 @@ void TCPConnection::asyncReceiveHandler(const boost::system::error_code& error, 
 			server->getClientManager()->removeClient(cID);
 		}
 
-		LOG_PRINTF(LOG_LEVEL::Error, "Error occured in TCP Reading: %s%s%s", error, " - ", error.message());
+		LOG_PRINTF(LOG_LEVEL::Error, "Error occured in TCP Reading: %s%s%s", error, " - ", error.message().c_str());
 		return;
 	}
 	//Parse the raw message and convert it into an IPacket

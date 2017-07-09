@@ -18,40 +18,26 @@ set (SOURCES
 	${SOURCE_DIR}/WSS_ServicePool.cpp
 	${SOURCE_DIR}/WSS_TCPAcceptor.cpp
 	${SOURCE_DIR}/WSS_TCPConnection.cpp)
-	
-set(Boost_INCLUDE_DIR "/usr/local/src/boost_1_64_0" CACHE STRING "The directories of the boost header files")
-set(Boost_LIBRARY_DIR "/usr/local/src/boost_1_64_0/stage/lib"  CACHE STRING "The directories of the boost library files")
 
-set(Proto_INCLUDE_DIR "/usr/local/src/protobuf-3.3.0/install/include")
-set(Proto_LIBRARY_DIR "/usr/local/src/protobuf-3.3.0/install/lib")
+include_directories(${HEADER_DIR}
+	${WS_Server_INCLUDE_DIRS}
+	${Sll_INCLUDE_DIR})
 
-set(AsyncPar_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../AsyncServerParent/include)
-set(AsyncPar_LIBRARY_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../AsyncServerParent/build)
+add_library(${PROJECT_NAME} STATIC ${SOURCES})
 
-set(HtmlHandle_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../HtmlHandle/include)
-set(HtmlHandle_LIBRARY_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../HtmlHandle/build)
-
-set(WS_Server_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../WS_Server/include)
-set(WS_Server_LIBRARY_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../WS_Server/build)
-
-include_directories(${HEADER_DIR})
-include_directories(${Boost_INCLUDE_DIR})
-include_directories(${Proto_INCLUDE_DIR})
-include_directories(${AsyncPar_INCLUDE_DIR})
-include_directories(${HtmlHandle_INCLUDE_DIR})
-include_directories(${WS_Server_INCLUDE_DIR})
-
-add_library(${PROJECT_NAME} STATIC ${HEADERS} ${SOURCES})
-
-target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARY_DIR}/libboost_system.a)
-target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARY_DIR}/libboost_thread.a)
-target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARY_DIR}/libboost_serialization.a)
-
-target_link_libraries(${PROJECT_NAME} ${Proto_LIBRARY_DIR}/libprotobuf.a)
-
-target_link_libraries(${PROJECT_NAME} ${AsyncPar_LIBRARY_DIR}/libAsyncServerParent.a)
-target_link_libraries(${PROJECT_NAME} ${HtmlHandle_LIBRARY_DIR}/libHtmlHandle.a)
-target_link_libraries(${PROJECT_NAME} ${WS_Server_LIBRARY_DIR}/WS_Server.a)
+target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARY_DIR}/libboost_system.a
+				      ${Boost_LIBRARY_DIR}/libboost_thread.a
+				      ${Proto_LIBRARY_DIR}/libprotobuf.a
+				      ${Sll_LIBRARY_DIR}/libssl.a
+				      ${Sll_LIBRARY_DIR}/libcrypto.a
+				      AsyncServerParent
+				      HtmlHandle
+				      WS_Server)
 
 set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 11)
 set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD_REQUIRED 11)
+
+set(${PROJECT_NAME}_INCLUDE_DIRS ${HEADER_DIR}
+				 ${WS_Server_INCLUDE_DIRS}
+				 ${Sll_INCLUDE_DIR}
+			CACHE INTERNAL "${PROJECT_NAME}: Include Directories" FORCE)

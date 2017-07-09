@@ -1,0 +1,2 @@
+#!/bin/bash
+/home/ec2-user/northrop/cmake-*/bin/cmake -DBoost_INCLUDE_DIR=/home/ec2-user/northrop/boost_1_64_0 -DBoost_LIBRARY_DIR=/home/ec2-user/northrop/boost_1_64_0/stage/lib -DProto_INCLUDE_DIR=/home/ec2-user/northrop/protobuf-3.3.0/install/include -DProto_LIBRARY_DIR=/home/ec2-user/northrop/protobuf-3.3.0/install/lib64 -DSll_INCLUDE_DIR=/home/ec2-user/northrop/ssl/include -DSll_LIBRARY_DIR=/home/ec2-user/northrop/ssl/lib ../

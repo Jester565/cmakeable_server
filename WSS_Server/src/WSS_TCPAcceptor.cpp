@@ -30,7 +30,7 @@ void WSS_TCPAcceptor::asyncAcceptHandler(const boost::system::error_code& error)
 {
 	if (error)
 	{
-		LOG_PRINTF(LOG_LEVEL::Error, "Error occured in TCPAcceptor: %s", error.message());
+	  LOG_PRINTF(LOG_LEVEL::Error, "Error occured in TCPAcceptor: %s", error.message().c_str());
 		return;
 	}
 	boost::shared_ptr <TCPConnection> tcpConnection = boost::make_shared<WSS_TCPConnection>(server, tempSSLSocket);
