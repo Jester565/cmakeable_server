@@ -1,5 +1,5 @@
 #include "WSHeaderManager.h"
-#include "Packets/PackFW.pb.h"
+#include "PackFW.pb.h"
 #include "WSOPacket.h"
 #include "WSIPacket.h"
 #include <ClientManager.h>

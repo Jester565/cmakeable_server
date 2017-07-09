@@ -18,138 +18,135 @@
 // @@protoc_insertion_point(includes)
 
 namespace ProtobufPackets {
+class PackHeaderInDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<PackHeaderIn> {
+} _PackHeaderIn_default_instance_;
+class PackHeaderOutDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<PackHeaderOut> {
+} _PackHeaderOut_default_instance_;
+
+namespace protobuf_PackFW_2eproto {
+
 
 namespace {
 
-const ::google::protobuf::Descriptor* PackHeaderIn_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  PackHeaderIn_reflection_ = NULL;
-const ::google::protobuf::Descriptor* PackHeaderOut_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  PackHeaderOut_reflection_ = NULL;
+::google::protobuf::Metadata file_level_metadata[2];
 
 }  // namespace
 
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTableField
+    const TableStruct::entries[] = {
+  {0, 0, 0, ::google::protobuf::internal::kInvalidMask, 0, 0},
+};
 
-void protobuf_AssignDesc_PackFW_2eproto() GOOGLE_ATTRIBUTE_COLD;
-void protobuf_AssignDesc_PackFW_2eproto() {
-  protobuf_AddDesc_PackFW_2eproto();
-  const ::google::protobuf::FileDescriptor* file =
-    ::google::protobuf::DescriptorPool::generated_pool()->FindFileByName(
-      "PackFW.proto");
-  GOOGLE_CHECK(file != NULL);
-  PackHeaderIn_descriptor_ = file->message_type(0);
-  static const int PackHeaderIn_offsets_[4] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PackHeaderIn, serverread_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PackHeaderIn, lockey_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PackHeaderIn, sendtoids_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PackHeaderIn, datasize_),
-  };
-  PackHeaderIn_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      PackHeaderIn_descriptor_,
-      PackHeaderIn::internal_default_instance(),
-      PackHeaderIn_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(PackHeaderIn),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PackHeaderIn, _internal_metadata_));
-  PackHeaderOut_descriptor_ = file->message_type(1);
-  static const int PackHeaderOut_offsets_[3] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PackHeaderOut, lockey_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PackHeaderOut, sentfromid_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PackHeaderOut, datasize_),
-  };
-  PackHeaderOut_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      PackHeaderOut_descriptor_,
-      PackHeaderOut::internal_default_instance(),
-      PackHeaderOut_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(PackHeaderOut),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PackHeaderOut, _internal_metadata_));
-}
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::AuxillaryParseTableField
+    const TableStruct::aux[] = {
+  ::google::protobuf::internal::AuxillaryParseTableField(),
+};
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
+    TableStruct::schema[] = {
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
+};
+
+const ::google::protobuf::uint32 TableStruct::offsets[] = {
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PackHeaderIn, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PackHeaderIn, serverread_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PackHeaderIn, lockey_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PackHeaderIn, sendtoids_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PackHeaderIn, datasize_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PackHeaderOut, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PackHeaderOut, lockey_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PackHeaderOut, sentfromid_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PackHeaderOut, datasize_),
+};
+
+static const ::google::protobuf::internal::MigrationSchema schemas[] = {
+  { 0, -1, sizeof(PackHeaderIn)},
+  { 9, -1, sizeof(PackHeaderOut)},
+};
+
+static ::google::protobuf::Message const * const file_default_instances[] = {
+  reinterpret_cast<const ::google::protobuf::Message*>(&_PackHeaderIn_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_PackHeaderOut_default_instance_),
+};
 
 namespace {
 
-GOOGLE_PROTOBUF_DECLARE_ONCE(protobuf_AssignDescriptors_once_);
+void protobuf_AssignDescriptors() {
+  AddDescriptors();
+  ::google::protobuf::MessageFactory* factory = NULL;
+  AssignDescriptors(
+      "PackFW.proto", schemas, file_default_instances, TableStruct::offsets, factory,
+      file_level_metadata, NULL, NULL);
+}
+
 void protobuf_AssignDescriptorsOnce() {
-  ::google::protobuf::GoogleOnceInit(&protobuf_AssignDescriptors_once_,
-                 &protobuf_AssignDesc_PackFW_2eproto);
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &protobuf_AssignDescriptors);
 }
 
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      PackHeaderIn_descriptor_, PackHeaderIn::internal_default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      PackHeaderOut_descriptor_, PackHeaderOut::internal_default_instance());
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 2);
 }
 
 }  // namespace
 
-void protobuf_ShutdownFile_PackFW_2eproto() {
-  PackHeaderIn_default_instance_.Shutdown();
-  delete PackHeaderIn_reflection_;
-  PackHeaderOut_default_instance_.Shutdown();
-  delete PackHeaderOut_reflection_;
+void TableStruct::Shutdown() {
+  _PackHeaderIn_default_instance_.Shutdown();
+  delete file_level_metadata[0].reflection;
+  _PackHeaderOut_default_instance_.Shutdown();
+  delete file_level_metadata[1].reflection;
 }
 
-void protobuf_InitDefaults_PackFW_2eproto_impl() {
+void TableStruct::InitDefaultsImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-  ::google::protobuf::internal::GetEmptyString();
-  PackHeaderIn_default_instance_.DefaultConstruct();
-  ::google::protobuf::internal::GetEmptyString();
-  PackHeaderOut_default_instance_.DefaultConstruct();
-  PackHeaderIn_default_instance_.get_mutable()->InitAsDefaultInstance();
-  PackHeaderOut_default_instance_.get_mutable()->InitAsDefaultInstance();
+  ::google::protobuf::internal::InitProtobufDefaults();
+  _PackHeaderIn_default_instance_.DefaultConstruct();
+  _PackHeaderOut_default_instance_.DefaultConstruct();
 }
 
-GOOGLE_PROTOBUF_DECLARE_ONCE(protobuf_InitDefaults_PackFW_2eproto_once_);
-void protobuf_InitDefaults_PackFW_2eproto() {
-  ::google::protobuf::GoogleOnceInit(&protobuf_InitDefaults_PackFW_2eproto_once_,
-                 &protobuf_InitDefaults_PackFW_2eproto_impl);
+void InitDefaults() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &TableStruct::InitDefaultsImpl);
 }
-void protobuf_AddDesc_PackFW_2eproto_impl() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  protobuf_InitDefaults_PackFW_2eproto();
+void AddDescriptorsImpl() {
+  InitDefaults();
+  static const char descriptor[] = {
+      "\n\014PackFW.proto\022\017ProtobufPackets\"W\n\014PackH"
+      "eaderIn\022\022\n\nserverRead\030\001 \001(\010\022\016\n\006locKey\030\002 "
+      "\001(\t\022\021\n\tsendToIDs\030\003 \003(\r\022\020\n\010dataSize\030\004 \001(\r"
+      "\"E\n\rPackHeaderOut\022\016\n\006locKey\030\001 \001(\t\022\022\n\nsen"
+      "tFromID\030\002 \001(\r\022\020\n\010dataSize\030\003 \001(\rb\006proto3"
+  };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-    "\n\014PackFW.proto\022\017ProtobufPackets\"W\n\014PackH"
-    "eaderIn\022\022\n\nserverRead\030\001 \001(\010\022\016\n\006locKey\030\002 "
-    "\001(\t\022\021\n\tsendToIDs\030\003 \003(\r\022\020\n\010dataSize\030\004 \001(\r"
-    "\"E\n\rPackHeaderOut\022\016\n\006locKey\030\001 \001(\t\022\022\n\nsen"
-    "tFromID\030\002 \001(\r\022\020\n\010dataSize\030\003 \001(\rb\006proto3", 199);
+      descriptor, 199);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "PackFW.proto", &protobuf_RegisterTypes);
-  ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_PackFW_2eproto);
+  ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);
 }
 
-GOOGLE_PROTOBUF_DECLARE_ONCE(protobuf_AddDesc_PackFW_2eproto_once_);
-void protobuf_AddDesc_PackFW_2eproto() {
-  ::google::protobuf::GoogleOnceInit(&protobuf_AddDesc_PackFW_2eproto_once_,
-                 &protobuf_AddDesc_PackFW_2eproto_impl);
+void AddDescriptors() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &AddDescriptorsImpl);
 }
 // Force AddDescriptors() to be called at static initialization time.
-struct StaticDescriptorInitializer_PackFW_2eproto {
-  StaticDescriptorInitializer_PackFW_2eproto() {
-    protobuf_AddDesc_PackFW_2eproto();
+struct StaticDescriptorInitializer {
+  StaticDescriptorInitializer() {
+    AddDescriptors();
   }
-} static_descriptor_initializer_PackFW_2eproto_;
+} static_descriptor_initializer;
 
-namespace {
-
-static void MergeFromFail(int line) GOOGLE_ATTRIBUTE_COLD GOOGLE_ATTRIBUTE_NORETURN;
-static void MergeFromFail(int line) {
-  ::google::protobuf::internal::MergeFromFail(__FILE__, line);
-}
-
-}  // namespace
+}  // namespace protobuf_PackFW_2eproto
 
 
 // ===================================================================
@@ -163,19 +160,25 @@ const int PackHeaderIn::kDataSizeFieldNumber;
 
 PackHeaderIn::PackHeaderIn()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (this != internal_default_instance()) protobuf_InitDefaults_PackFW_2eproto();
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_PackFW_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:ProtobufPackets.PackHeaderIn)
 }
-
-void PackHeaderIn::InitAsDefaultInstance() {
-}
-
 PackHeaderIn::PackHeaderIn(const PackHeaderIn& from)
   : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  UnsafeMergeFrom(from);
+      _internal_metadata_(NULL),
+      sendtoids_(from.sendtoids_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  lockey_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.lockey().size() > 0) {
+    lockey_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.lockey_);
+  }
+  ::memcpy(&serverread_, &from.serverread_,
+    reinterpret_cast<char*>(&datasize_) -
+    reinterpret_cast<char*>(&serverread_) + sizeof(datasize_));
   // @@protoc_insertion_point(copy_constructor:ProtobufPackets.PackHeaderIn)
 }
 
@@ -201,16 +204,14 @@ void PackHeaderIn::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* PackHeaderIn::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return PackHeaderIn_descriptor_;
+  protobuf_PackFW_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_PackFW_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const PackHeaderIn& PackHeaderIn::default_instance() {
-  protobuf_InitDefaults_PackFW_2eproto();
+  protobuf_PackFW_2eproto::InitDefaults();
   return *internal_default_instance();
 }
-
-::google::protobuf::internal::ExplicitlyConstructed<PackHeaderIn> PackHeaderIn_default_instance_;
 
 PackHeaderIn* PackHeaderIn::New(::google::protobuf::Arena* arena) const {
   PackHeaderIn* n = new PackHeaderIn;
@@ -222,29 +223,10 @@ PackHeaderIn* PackHeaderIn::New(::google::protobuf::Arena* arena) const {
 
 void PackHeaderIn::Clear() {
 // @@protoc_insertion_point(message_clear_start:ProtobufPackets.PackHeaderIn)
-#if defined(__clang__)
-#define ZR_HELPER_(f) \
-  _Pragma("clang diagnostic push") \
-  _Pragma("clang diagnostic ignored \"-Winvalid-offsetof\"") \
-  __builtin_offsetof(PackHeaderIn, f) \
-  _Pragma("clang diagnostic pop")
-#else
-#define ZR_HELPER_(f) reinterpret_cast<char*>(\
-  &reinterpret_cast<PackHeaderIn*>(16)->f)
-#endif
-
-#define ZR_(first, last) do {\
-  ::memset(&(first), 0,\
-           ZR_HELPER_(last) - ZR_HELPER_(first) + sizeof(last));\
-} while (0)
-
-  ZR_(serverread_, datasize_);
-  lockey_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-
-#undef ZR_HELPER_
-#undef ZR_
-
   sendtoids_.Clear();
+  lockey_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&serverread_, 0, reinterpret_cast<char*>(&datasize_) -
+    reinterpret_cast<char*>(&serverread_) + sizeof(datasize_));
 }
 
 bool PackHeaderIn::MergePartialFromCodedStream(
@@ -253,13 +235,14 @@ bool PackHeaderIn::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:ProtobufPackets.PackHeaderIn)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional bool serverRead = 1;
+      // bool serverRead = 1;
       case 1: {
-        if (tag == 8) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -267,14 +250,13 @@ bool PackHeaderIn::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(18)) goto parse_locKey;
         break;
       }
 
-      // optional string locKey = 2;
+      // string locKey = 2;
       case 2: {
-        if (tag == 18) {
-         parse_locKey:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_lockey()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -284,32 +266,31 @@ bool PackHeaderIn::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(26)) goto parse_sendToIDs;
         break;
       }
 
       // repeated uint32 sendToIDs = 3;
       case 3: {
-        if (tag == 26) {
-         parse_sendToIDs:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(26u)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
                  input, this->mutable_sendtoids())));
-        } else if (tag == 24) {
+        } else if (static_cast< ::google::protobuf::uint8>(tag) ==
+                   static_cast< ::google::protobuf::uint8>(24u)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 1, 26, input, this->mutable_sendtoids())));
+                 1, 26u, input, this->mutable_sendtoids())));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(32)) goto parse_dataSize;
         break;
       }
 
-      // optional uint32 dataSize = 4;
+      // uint32 dataSize = 4;
       case 4: {
-        if (tag == 32) {
-         parse_dataSize:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(32u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -317,7 +298,6 @@ bool PackHeaderIn::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
@@ -345,12 +325,15 @@ failure:
 void PackHeaderIn::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:ProtobufPackets.PackHeaderIn)
-  // optional bool serverRead = 1;
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // bool serverRead = 1;
   if (this->serverread() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(1, this->serverread(), output);
   }
 
-  // optional string locKey = 2;
+  // string locKey = 2;
   if (this->lockey().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->lockey().data(), this->lockey().length(),
@@ -365,12 +348,12 @@ void PackHeaderIn::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteTag(3, ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
     output->WriteVarint32(_sendtoids_cached_byte_size_);
   }
-  for (int i = 0; i < this->sendtoids_size(); i++) {
+  for (int i = 0, n = this->sendtoids_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32NoTag(
       this->sendtoids(i), output);
   }
 
-  // optional uint32 dataSize = 4;
+  // uint32 dataSize = 4;
   if (this->datasize() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(4, this->datasize(), output);
   }
@@ -380,14 +363,16 @@ void PackHeaderIn::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* PackHeaderIn::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
   // @@protoc_insertion_point(serialize_to_array_start:ProtobufPackets.PackHeaderIn)
-  // optional bool serverRead = 1;
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // bool serverRead = 1;
   if (this->serverread() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(1, this->serverread(), target);
   }
 
-  // optional string locKey = 2;
+  // string locKey = 2;
   if (this->lockey().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->lockey().data(), this->lockey().length(),
@@ -406,13 +391,11 @@ void PackHeaderIn::SerializeWithCachedSizes(
       target);
     target = ::google::protobuf::io::CodedOutputStream::WriteVarint32ToArray(
       _sendtoids_cached_byte_size_, target);
-  }
-  for (int i = 0; i < this->sendtoids_size(); i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      WriteUInt32NoTagToArray(this->sendtoids(i), target);
+      WriteUInt32NoTagToArray(this->sendtoids_, target);
   }
 
-  // optional uint32 dataSize = 4;
+  // uint32 dataSize = 4;
   if (this->datasize() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(4, this->datasize(), target);
   }
@@ -425,33 +408,10 @@ size_t PackHeaderIn::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ProtobufPackets.PackHeaderIn)
   size_t total_size = 0;
 
-  // optional bool serverRead = 1;
-  if (this->serverread() != 0) {
-    total_size += 1 + 1;
-  }
-
-  // optional string locKey = 2;
-  if (this->lockey().size() > 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->lockey());
-  }
-
-  // optional uint32 dataSize = 4;
-  if (this->datasize() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->datasize());
-  }
-
   // repeated uint32 sendToIDs = 3;
   {
-    size_t data_size = 0;
-    unsigned int count = this->sendtoids_size();
-    for (unsigned int i = 0; i < count; i++) {
-      data_size += ::google::protobuf::internal::WireFormatLite::
-        UInt32Size(this->sendtoids(i));
-    }
+    size_t data_size = ::google::protobuf::internal::WireFormatLite::
+      UInt32Size(this->sendtoids_);
     if (data_size > 0) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::Int32Size(data_size);
@@ -463,6 +423,25 @@ size_t PackHeaderIn::ByteSizeLong() const {
     total_size += data_size;
   }
 
+  // string locKey = 2;
+  if (this->lockey().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->lockey());
+  }
+
+  // bool serverRead = 1;
+  if (this->serverread() != 0) {
+    total_size += 1 + 1;
+  }
+
+  // uint32 dataSize = 4;
+  if (this->datasize() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        this->datasize());
+  }
+
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = cached_size;
@@ -472,7 +451,7 @@ size_t PackHeaderIn::ByteSizeLong() const {
 
 void PackHeaderIn::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:ProtobufPackets.PackHeaderIn)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  GOOGLE_DCHECK_NE(&from, this);
   const PackHeaderIn* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const PackHeaderIn>(
           &from);
@@ -481,28 +460,24 @@ void PackHeaderIn::MergeFrom(const ::google::protobuf::Message& from) {
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:ProtobufPackets.PackHeaderIn)
-    UnsafeMergeFrom(*source);
+    MergeFrom(*source);
   }
 }
 
 void PackHeaderIn::MergeFrom(const PackHeaderIn& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:ProtobufPackets.PackHeaderIn)
-  if (GOOGLE_PREDICT_TRUE(&from != this)) {
-    UnsafeMergeFrom(from);
-  } else {
-    MergeFromFail(__LINE__);
-  }
-}
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
 
-void PackHeaderIn::UnsafeMergeFrom(const PackHeaderIn& from) {
-  GOOGLE_DCHECK(&from != this);
-  sendtoids_.UnsafeMergeFrom(from.sendtoids_);
-  if (from.serverread() != 0) {
-    set_serverread(from.serverread());
-  }
+  sendtoids_.MergeFrom(from.sendtoids_);
   if (from.lockey().size() > 0) {
 
     lockey_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.lockey_);
+  }
+  if (from.serverread() != 0) {
+    set_serverread(from.serverread());
   }
   if (from.datasize() != 0) {
     set_datasize(from.datasize());
@@ -520,11 +495,10 @@ void PackHeaderIn::CopyFrom(const PackHeaderIn& from) {
 // @@protoc_insertion_point(class_specific_copy_from_start:ProtobufPackets.PackHeaderIn)
   if (&from == this) return;
   Clear();
-  UnsafeMergeFrom(from);
+  MergeFrom(from);
 }
 
 bool PackHeaderIn::IsInitialized() const {
-
   return true;
 }
 
@@ -533,26 +507,22 @@ void PackHeaderIn::Swap(PackHeaderIn* other) {
   InternalSwap(other);
 }
 void PackHeaderIn::InternalSwap(PackHeaderIn* other) {
-  std::swap(serverread_, other->serverread_);
+  sendtoids_.InternalSwap(&other->sendtoids_);
   lockey_.Swap(&other->lockey_);
-  sendtoids_.UnsafeArenaSwap(&other->sendtoids_);
+  std::swap(serverread_, other->serverread_);
   std::swap(datasize_, other->datasize_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata PackHeaderIn::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = PackHeaderIn_descriptor_;
-  metadata.reflection = PackHeaderIn_reflection_;
-  return metadata;
+  protobuf_PackFW_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_PackFW_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // PackHeaderIn
 
-// optional bool serverRead = 1;
+// bool serverRead = 1;
 void PackHeaderIn::clear_serverread() {
   serverread_ = false;
 }
@@ -566,20 +536,29 @@ void PackHeaderIn::set_serverread(bool value) {
   // @@protoc_insertion_point(field_set:ProtobufPackets.PackHeaderIn.serverRead)
 }
 
-// optional string locKey = 2;
+// string locKey = 2;
 void PackHeaderIn::clear_lockey() {
   lockey_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 const ::std::string& PackHeaderIn::lockey() const {
   // @@protoc_insertion_point(field_get:ProtobufPackets.PackHeaderIn.locKey)
-  return lockey_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return lockey_.GetNoArena();
 }
 void PackHeaderIn::set_lockey(const ::std::string& value) {
   
   lockey_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:ProtobufPackets.PackHeaderIn.locKey)
 }
+#if LANG_CXX11
+void PackHeaderIn::set_lockey(::std::string&& value) {
+  
+  lockey_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:ProtobufPackets.PackHeaderIn.locKey)
+}
+#endif
 void PackHeaderIn::set_lockey(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   lockey_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:ProtobufPackets.PackHeaderIn.locKey)
@@ -640,7 +619,7 @@ PackHeaderIn::mutable_sendtoids() {
   return &sendtoids_;
 }
 
-// optional uint32 dataSize = 4;
+// uint32 dataSize = 4;
 void PackHeaderIn::clear_datasize() {
   datasize_ = 0u;
 }
@@ -654,9 +633,6 @@ void PackHeaderIn::set_datasize(::google::protobuf::uint32 value) {
   // @@protoc_insertion_point(field_set:ProtobufPackets.PackHeaderIn.dataSize)
 }
 
-inline const PackHeaderIn* PackHeaderIn::internal_default_instance() {
-  return &PackHeaderIn_default_instance_.get();
-}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -669,19 +645,24 @@ const int PackHeaderOut::kDataSizeFieldNumber;
 
 PackHeaderOut::PackHeaderOut()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (this != internal_default_instance()) protobuf_InitDefaults_PackFW_2eproto();
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_PackFW_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:ProtobufPackets.PackHeaderOut)
 }
-
-void PackHeaderOut::InitAsDefaultInstance() {
-}
-
 PackHeaderOut::PackHeaderOut(const PackHeaderOut& from)
   : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  UnsafeMergeFrom(from);
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  lockey_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.lockey().size() > 0) {
+    lockey_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.lockey_);
+  }
+  ::memcpy(&sentfromid_, &from.sentfromid_,
+    reinterpret_cast<char*>(&datasize_) -
+    reinterpret_cast<char*>(&sentfromid_) + sizeof(datasize_));
   // @@protoc_insertion_point(copy_constructor:ProtobufPackets.PackHeaderOut)
 }
 
@@ -707,16 +688,14 @@ void PackHeaderOut::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* PackHeaderOut::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return PackHeaderOut_descriptor_;
+  protobuf_PackFW_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_PackFW_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const PackHeaderOut& PackHeaderOut::default_instance() {
-  protobuf_InitDefaults_PackFW_2eproto();
+  protobuf_PackFW_2eproto::InitDefaults();
   return *internal_default_instance();
 }
-
-::google::protobuf::internal::ExplicitlyConstructed<PackHeaderOut> PackHeaderOut_default_instance_;
 
 PackHeaderOut* PackHeaderOut::New(::google::protobuf::Arena* arena) const {
   PackHeaderOut* n = new PackHeaderOut;
@@ -728,28 +707,9 @@ PackHeaderOut* PackHeaderOut::New(::google::protobuf::Arena* arena) const {
 
 void PackHeaderOut::Clear() {
 // @@protoc_insertion_point(message_clear_start:ProtobufPackets.PackHeaderOut)
-#if defined(__clang__)
-#define ZR_HELPER_(f) \
-  _Pragma("clang diagnostic push") \
-  _Pragma("clang diagnostic ignored \"-Winvalid-offsetof\"") \
-  __builtin_offsetof(PackHeaderOut, f) \
-  _Pragma("clang diagnostic pop")
-#else
-#define ZR_HELPER_(f) reinterpret_cast<char*>(\
-  &reinterpret_cast<PackHeaderOut*>(16)->f)
-#endif
-
-#define ZR_(first, last) do {\
-  ::memset(&(first), 0,\
-           ZR_HELPER_(last) - ZR_HELPER_(first) + sizeof(last));\
-} while (0)
-
-  ZR_(sentfromid_, datasize_);
   lockey_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-
-#undef ZR_HELPER_
-#undef ZR_
-
+  ::memset(&sentfromid_, 0, reinterpret_cast<char*>(&datasize_) -
+    reinterpret_cast<char*>(&sentfromid_) + sizeof(datasize_));
 }
 
 bool PackHeaderOut::MergePartialFromCodedStream(
@@ -758,13 +718,14 @@ bool PackHeaderOut::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:ProtobufPackets.PackHeaderOut)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional string locKey = 1;
+      // string locKey = 1;
       case 1: {
-        if (tag == 10) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_lockey()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -774,14 +735,13 @@ bool PackHeaderOut::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(16)) goto parse_sentFromID;
         break;
       }
 
-      // optional uint32 sentFromID = 2;
+      // uint32 sentFromID = 2;
       case 2: {
-        if (tag == 16) {
-         parse_sentFromID:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -789,14 +749,13 @@ bool PackHeaderOut::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(24)) goto parse_dataSize;
         break;
       }
 
-      // optional uint32 dataSize = 3;
+      // uint32 dataSize = 3;
       case 3: {
-        if (tag == 24) {
-         parse_dataSize:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(24u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -804,7 +763,6 @@ bool PackHeaderOut::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
@@ -832,7 +790,10 @@ failure:
 void PackHeaderOut::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:ProtobufPackets.PackHeaderOut)
-  // optional string locKey = 1;
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string locKey = 1;
   if (this->lockey().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->lockey().data(), this->lockey().length(),
@@ -842,12 +803,12 @@ void PackHeaderOut::SerializeWithCachedSizes(
       1, this->lockey(), output);
   }
 
-  // optional uint32 sentFromID = 2;
+  // uint32 sentFromID = 2;
   if (this->sentfromid() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->sentfromid(), output);
   }
 
-  // optional uint32 dataSize = 3;
+  // uint32 dataSize = 3;
   if (this->datasize() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->datasize(), output);
   }
@@ -857,9 +818,11 @@ void PackHeaderOut::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* PackHeaderOut::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
   // @@protoc_insertion_point(serialize_to_array_start:ProtobufPackets.PackHeaderOut)
-  // optional string locKey = 1;
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string locKey = 1;
   if (this->lockey().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->lockey().data(), this->lockey().length(),
@@ -870,12 +833,12 @@ void PackHeaderOut::SerializeWithCachedSizes(
         1, this->lockey(), target);
   }
 
-  // optional uint32 sentFromID = 2;
+  // uint32 sentFromID = 2;
   if (this->sentfromid() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->sentfromid(), target);
   }
 
-  // optional uint32 dataSize = 3;
+  // uint32 dataSize = 3;
   if (this->datasize() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->datasize(), target);
   }
@@ -888,21 +851,21 @@ size_t PackHeaderOut::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ProtobufPackets.PackHeaderOut)
   size_t total_size = 0;
 
-  // optional string locKey = 1;
+  // string locKey = 1;
   if (this->lockey().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->lockey());
   }
 
-  // optional uint32 sentFromID = 2;
+  // uint32 sentFromID = 2;
   if (this->sentfromid() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt32Size(
         this->sentfromid());
   }
 
-  // optional uint32 dataSize = 3;
+  // uint32 dataSize = 3;
   if (this->datasize() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt32Size(
@@ -918,7 +881,7 @@ size_t PackHeaderOut::ByteSizeLong() const {
 
 void PackHeaderOut::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:ProtobufPackets.PackHeaderOut)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  GOOGLE_DCHECK_NE(&from, this);
   const PackHeaderOut* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const PackHeaderOut>(
           &from);
@@ -927,21 +890,17 @@ void PackHeaderOut::MergeFrom(const ::google::protobuf::Message& from) {
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:ProtobufPackets.PackHeaderOut)
-    UnsafeMergeFrom(*source);
+    MergeFrom(*source);
   }
 }
 
 void PackHeaderOut::MergeFrom(const PackHeaderOut& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:ProtobufPackets.PackHeaderOut)
-  if (GOOGLE_PREDICT_TRUE(&from != this)) {
-    UnsafeMergeFrom(from);
-  } else {
-    MergeFromFail(__LINE__);
-  }
-}
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
 
-void PackHeaderOut::UnsafeMergeFrom(const PackHeaderOut& from) {
-  GOOGLE_DCHECK(&from != this);
   if (from.lockey().size() > 0) {
 
     lockey_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.lockey_);
@@ -965,11 +924,10 @@ void PackHeaderOut::CopyFrom(const PackHeaderOut& from) {
 // @@protoc_insertion_point(class_specific_copy_from_start:ProtobufPackets.PackHeaderOut)
   if (&from == this) return;
   Clear();
-  UnsafeMergeFrom(from);
+  MergeFrom(from);
 }
 
 bool PackHeaderOut::IsInitialized() const {
-
   return true;
 }
 
@@ -981,35 +939,40 @@ void PackHeaderOut::InternalSwap(PackHeaderOut* other) {
   lockey_.Swap(&other->lockey_);
   std::swap(sentfromid_, other->sentfromid_);
   std::swap(datasize_, other->datasize_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata PackHeaderOut::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = PackHeaderOut_descriptor_;
-  metadata.reflection = PackHeaderOut_reflection_;
-  return metadata;
+  protobuf_PackFW_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_PackFW_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // PackHeaderOut
 
-// optional string locKey = 1;
+// string locKey = 1;
 void PackHeaderOut::clear_lockey() {
   lockey_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 const ::std::string& PackHeaderOut::lockey() const {
   // @@protoc_insertion_point(field_get:ProtobufPackets.PackHeaderOut.locKey)
-  return lockey_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return lockey_.GetNoArena();
 }
 void PackHeaderOut::set_lockey(const ::std::string& value) {
   
   lockey_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:ProtobufPackets.PackHeaderOut.locKey)
 }
+#if LANG_CXX11
+void PackHeaderOut::set_lockey(::std::string&& value) {
+  
+  lockey_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:ProtobufPackets.PackHeaderOut.locKey)
+}
+#endif
 void PackHeaderOut::set_lockey(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   lockey_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:ProtobufPackets.PackHeaderOut.locKey)
@@ -1040,7 +1003,7 @@ void PackHeaderOut::set_allocated_lockey(::std::string* lockey) {
   // @@protoc_insertion_point(field_set_allocated:ProtobufPackets.PackHeaderOut.locKey)
 }
 
-// optional uint32 sentFromID = 2;
+// uint32 sentFromID = 2;
 void PackHeaderOut::clear_sentfromid() {
   sentfromid_ = 0u;
 }
@@ -1054,7 +1017,7 @@ void PackHeaderOut::set_sentfromid(::google::protobuf::uint32 value) {
   // @@protoc_insertion_point(field_set:ProtobufPackets.PackHeaderOut.sentFromID)
 }
 
-// optional uint32 dataSize = 3;
+// uint32 dataSize = 3;
 void PackHeaderOut::clear_datasize() {
   datasize_ = 0u;
 }
@@ -1068,9 +1031,6 @@ void PackHeaderOut::set_datasize(::google::protobuf::uint32 value) {
   // @@protoc_insertion_point(field_set:ProtobufPackets.PackHeaderOut.dataSize)
 }
 
-inline const PackHeaderOut* PackHeaderOut::internal_default_instance() {
-  return &PackHeaderOut_default_instance_.get();
-}
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // @@protoc_insertion_point(namespace_scope)

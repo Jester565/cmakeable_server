@@ -22,4 +22,4 @@ namespace websocket
 		static reply stock_reply(status_type status);
 	};
 }
-#endif;
+#endif

@@ -31,6 +31,7 @@ set (SOURCES
 	${SOURCE_DIR}/request_handler.cpp
 	${SOURCE_DIR}/request_parser.cpp
 	${SOURCE_DIR}/SHA1.cpp)
+include_directories(${HEADER_DIR})
 
 add_library(${PROJECT_NAME} STATIC ${SOURCES})
 

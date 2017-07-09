@@ -36,12 +36,6 @@ set (SOURCES
 	${SOURCE_DIR}/ServicePool.cpp
 	${SOURCE_DIR}/TCPAcceptor.cpp
 	${SOURCE_DIR}/TCPConnection.cpp)
-	
-set(Boost_INCLUDE_DIR "/usr/local/src/boost_1_64_0" CACHE STRING "The directories of the boost header files")
-set(Boost_LIBRARY_DIR "/usr/local/src/boost_1_64_0/stage/lib"  CACHE STRING "The directories of the boost library files")
-
-set(Proto_INCLUDE_DIR "/usr/local/src/protobuf-3.3.0/install/include")
-set(Proto_LIBRARY_DIR "/usr/local/src/protobuf-3.3.0/install/lib")
 
 include_directories(${HEADER_DIR}
 	${Boost_INCLUDE_DIR}
@@ -57,7 +51,7 @@ target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARY_DIR}/libboost_system.a
 set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 11)
 set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD_REQUIRED 11)
 
-set(${PROJECT_NAME}_INCLUDE_DIRS ${HEADERS_DIR}
+set(${PROJECT_NAME}_INCLUDE_DIRS ${HEADER_DIR}
 ${Boost_INCLUDE_DIR}
 ${Proto_INCLUDE_DIR}
 CACHE INTERNAL "${PROJECT_NAME}: Include Directories" FORCE)
