@@ -33,22 +33,23 @@ set(AsyncPar_LIBRARY_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../AsyncServerParent/build)
 set(HtmlHandle_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../HtmlHandle/include)
 set(HtmlHandle_LIBRARY_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../HtmlHandle/build)
 
-include_directories(${HEADER_DIR})
-include_directories(${Boost_INCLUDE_DIR})
-include_directories(${Proto_INCLUDE_DIR})
-include_directories(${AsyncPar_INCLUDE_DIR})
-include_directories(${HtmlHandle_INCLUDE_DIR})
+include_directories(${AsyncServerParent_INCLUDE_DIRS}
+					${HtmlHandle_INCLUDE_DIRS})
 
-add_library(${PROJECT_NAME} STATIC ${HEADERS} ${SOURCES})
+add_library(${PROJECT_NAME} STATIC ${SOURCES})
 
-target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARY_DIR}/libboost_system.a)
-target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARY_DIR}/libboost_thread.a)
-target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARY_DIR}/libboost_serialization.a)
-
-target_link_libraries(${PROJECT_NAME} ${Proto_LIBRARY_DIR}/libprotobuf.a)
-
-target_link_libraries(${PROJECT_NAME} ${AsyncPar_LIBRARY_DIR}/libAsyncServerParent.a)
-target_link_libraries(${PROJECT_NAME} ${HtmlHandle_LIBRARY_DIR}/libHtmlHandle.a)
+target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARY_DIR}/libboost_system.a
+	${Boost_LIBRARY_DIR}/libboost_thread.a
+	${Boost_LIBRARY_DIR}/libboost_serialization.a
+	${Proto_LIBRARY_DIR}/libprotobuf.a
+	${AsyncPar_LIBRARY_DIR}/libAsyncServerParent.a
+	${HtmlHandle_LIBRARY_DIR}/libHtmlHandle.a)
 
 set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 11)
 set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD_REQUIRED 11)
+
+set(${PROJECT_NAME}_INCLUDE_DIRS ${HEADERS_DIR}
+${AsyncServerParent_INCLUDE_DIRS}
+${HtmlHandle_INCLUDE_DIRS}
+CACHE INTERNAL "${PROJECT_NAME}: Include Directories" FORCE)
+

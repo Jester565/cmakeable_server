@@ -32,9 +32,12 @@ set (SOURCES
 	${SOURCE_DIR}/request_parser.cpp
 	${SOURCE_DIR}/SHA1.cpp)
 
-include_directories(${HEADER_DIR})
+add_library(${PROJECT_NAME} STATIC ${SOURCES})
 
-add_library(${PROJECT_NAME} STATIC ${HEADERS} ${SOURCES})
+target_link_libraries(${PROJECT_NAME})
 
 set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 11)
 set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD_REQUIRED 11)
+
+set(${PROJECT_NAME}_INCLUDE_DIRS ${HEADER_DIR}
+	CACHE INTERNAL "${PROJECT_NAME}: Include Directories" FORCE)
