@@ -31,6 +31,7 @@ MESSAGE(STATUS "ProtoLibDir: " ${Proto_LIBRARY_DIR})
 
 target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARY_DIR}/libboost_system.a
 	${Boost_LIBRARY_DIR}/libboost_thread.a
+	${Boost_LIBRARY_DIR}/libboost_serialization.a
 	${Proto_LIBRARY_DIR}/libprotobuf.a
 	HtmlHandle
 	AsyncServerParent)

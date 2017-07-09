@@ -45,6 +45,7 @@ add_library(${PROJECT_NAME} STATIC ${SOURCES})
 
 target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARY_DIR}/libboost_system.a
 	${Boost_LIBRARY_DIR}/libboost_thread.a
+	${Boost_LIBRARY_DIR}/libboost_serialization.a
 	${Proto_LIBRARY_DIR}/libprotobuf.a)
 
 set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 11)
