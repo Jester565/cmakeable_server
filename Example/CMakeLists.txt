@@ -10,11 +10,13 @@ set(SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
 set (SOURCES
 	${SOURCE_DIR}/source.cpp)
 
-include_directories(${WSS_Server_INCLUDE_DIRS})
+include_directories(${WS_Server_INCLUDE_DIRS})
 
+find_package(Threads)
 add_executable(${PROJECT_NAME} ${SOURCES})
 
-target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARY_DIR}/libboost_system.a
+target_link_libraries(${PROJECT_NAME} ${CMAKE_THREAD_LIBS_INIT} 
+${Boost_LIBRARY_DIR}/libboost_system.a
 ${Boost_LIBRARY_DIR}/libboost_thread.a
 ${Proto_LIBRARY_DIR}/libprotobuf.a
 AsyncServerParent
